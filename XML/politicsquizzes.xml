@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<quiz>
+  <quizname>SVENSKA POLITIKER</quizname>
+  <question>
+    <questionno>Fråga 1</questionno>
+    <questiontext>Vad heter Sveriges statsminister?</questiontext>
+    <questionalternatives>
+      <questionalternative id="A">Fredrik Reinfeldt</questionalternative>
+      <questionalternative id="B">Anders Borg</questionalternative>
+      <questionalternative id="B">Mona Sahlin</questionalternative>
+      <questionalternative id="B">Göran Persson</questionalternative>
+    </questionalternatives>
+    <answer>
+      <answercomment>Fredrik Reinfeldt är rätt svar. Han har varit Sveriges statsminister sedan den 6 oktober 2006.</answercomment>
+      <answersource>
+        <a href="http://sv.wikipedia.org/wiki/Fredrik_reinfeldt">Wikipedia</a>
+      </answersource>
+    </answer>
+  </question>
+  <question>
+    <questioNo>2</questioNo>
+    <questionText>Vad heter Socialdemokraternas partiledare?</questionText>
+    <questionAlternatives>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Ingvar Carlsson</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Håkan Juholt</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Maria Wetterstrand</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>A</questionAlternativeID>
+        <questionAlternativeText>Stefan Löfven</questionAlternativeText>
+      </questionAlternative>
+    </questionAlternatives>
+    <answer>
+      <answerComment>Stefan Löfven är rätt svar. Han har varit Socialdemokraternas partiledare sedan den 27 januari 2012.</answerComment>
+      <answerSource>
+        <a href="http://sv.wikipedia.org/wiki/Stefan_L%C3%B6fven">Wikipedia</a>
+      </answerSource>
+    </answer>
+  </question>
+  <question>
+    <questionNo>3</questionNo>
+    <questionText>Vad heter Miljöpartiets språkrör?</questionText>
+    <questionAlternatives>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Maria Wetterstrand och Peter Eriksson</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Marianne Samuelsson och Birger Schlaug</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>B</questionAlternativeID>
+        <questionAlternativeText>Fiona Björling och Anders Nordin</questionAlternativeText>
+      </questionAlternative>
+      <questionAlternative>
+        <questionAlternativeID>A</questionAlternativeID>
+        <questionAlternativeText>Åsa Romson och Gustav Fridolin</questionAlternativeText>
+      </questionAlternative>
+    </questionAlternatives>
+    <answer>
+      <answerComment>Åsa Romson och Gustav Fridolin är rätt svar. De har varit språkrör för Miljöpartiet sedan 2011.</answerComment>
+      <answerSource>
+        <a href="http://sv.wikipedia.org/wiki/Milj%C3%B6partiet">Wikipedia</a>
+      </answerSource>
+    </answer>
+  </question>
+</quiz>
