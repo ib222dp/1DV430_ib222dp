@@ -160,7 +160,7 @@ header
     height: 65px;
     margin: 0px 5px 0px 5px;
 }
-#buttons a, #profilebuttons a, #quizendmenu a
+#buttons a, #profilebuttons a
 {
     margin-left: 10px;
     float: right;
@@ -181,31 +181,28 @@ header
     width: 280px;
     margin-right: 10px;
 }
-#quizendmenu a
-{
-    width: 150px;
-}
-#questiontext a, #nextbutton a
+
+#questiontext a, #nextbutton a, #quizendmenu a
 {
     width: 400px;
     margin-top: 10px;
     margin-left: 20px;
 }
 /*LINKS*/
-/*Starttext, Quizzes, Subcategories, Sourcelink, Questionright*/
-#starttext a, #quizzes a, #subcategories a, #sourcelink a, #questionright a, #subcategorytable a
+/*Starttext, Quizzes, Subcategories, Answertext, Questionright*/
+#starttext a, #quizzes a, #subcategories a, #answertext a, #subcategorytable a
 {
     color: Blue;
 }
-#starttext a:hover, #quizzes a:hover, #subcategories a:hover, #sourcelink a:hover, #questionright a:hover, #subcategorytable a:hover
+#starttext a:hover, #quizzes a:hover, #subcategories a:hover, #answertext a:hover, #subcategorytable a:hover
 {
     color: Purple;
 }
-#starttext a:visited, #quizzes a:visited, #subcategories a:visited, #sourcelink a:visited, #questionright a:visited, #subcategorytable a:visited
+#starttext a:visited, #quizzes a:visited, #subcategories a:visited, #answertext a:visited, #subcategorytable a:visited
 {
     color: Purple;
 }
-#starttext a:focus, #quizzes a:focus, #subcategories a:focus, #sourcelink a:focus, #questionright a:focus, #subcategorytable a:focus
+#starttext a:focus, #quizzes a:focus, #subcategories a:focus, #answertext a:focus, #subcategorytable a:focus
 {
     color: Red;
 }
@@ -234,13 +231,13 @@ header
     font-family: "Cooper Std Black", Serif;
     font-weight: bold;
 }
-#content a, #contentnoheight a, p, #question p, #quiz p, #sourcelink a, p, #starttext p, #created p, #quizzes p
+#content a, #contentnoheight a, p, #question p, #quiz p, #answertext a, p, #starttext p, #created p, #quizzes p
 {
     font-family: "Franklin Gothic", Sans-Serif;
     font-weight: bold;
     line-height: 120%;
 }
-#question h1, h2, p, #quiz h1, p, #starttext h1, p
+#question h1, h2, p, #quiz h1, p, #answertext a, p, #starttext h1, p
 {
     padding: 20px;
 }
