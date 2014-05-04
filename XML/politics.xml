@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<politicsquizzes>
+  <quiz>
+    <quiznumber>0</quiznumber>
+    <quizname>SVENSKA POLITIKER</quizname>
+    <questions>
+      <question>
+        <questionno>1</questionno>
+        <questiontext>Vad heter Sveriges statsminister?</questiontext>
+        <questionalternatives>
+          <questionalternative id="A">Fredrik Reinfeldt</questionalternative>
+          <questionalternative id="B">Anders Borg</questionalternative>
+          <questionalternative id="C">Mona Sahlin</questionalternative>
+          <questionalternative id="D">Göran Persson</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Fredrik Reinfeldt är rätt svar. Han har varit Sveriges statsminister sedan den 6 oktober 2006.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Fredrik_reinfeldt
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>2</questionno>
+        <questiontext>Vad heter Socialdemokraternas partiledare?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Ingvar Carlsson</questionalternative>
+          <questionalternative id="C">Håkan Juholt</questionalternative>
+          <questionalternative id="D">Maria Wetterstrand</questionalternative>
+          <questionalternative id="A">Stefan Löfven</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Stefan Löfven är rätt svar. Han har varit Socialdemokraternas partiledare sedan den 27 januari 2012.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Stefan_L%C3%B6fven
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>3</questionno>
+        <questiontext>Vad heter Miljöpartiets språkrör?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Maria Wetterstrand och Peter Eriksson</questionalternative>
+          <questionalternative id="C">Marianne Samuelsson och Birger Schlaug</questionalternative>
+          <questionalternative id="D">Fiona Björling och Anders Nordin</questionalternative>
+          <questionalternative id="A">Åsa Romson och Gustav Fridolin</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Åsa Romson och Gustav Fridolin är rätt svar. De har varit språkrör för Miljöpartiet sedan 2011.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Milj%C3%B6partiet
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+    </questions>
+  </quiz>
+  <quiz>
+    <quiznumber>1</quiznumber>
+    <quizname>NORDISKA POLITIKER</quizname>
+    <questions>
+      <question>
+        <questionno>1</questionno>
+        <questiontext>Vad heter Norges nuvarande statsminister?</questiontext>
+        <questionalternatives>
+          <questionalternative id="A">Erna Solberg</questionalternative>
+          <questionalternative id="B">Jens Stoltenberg</questionalternative>
+          <questionalternative id="C">Kjell Magne Bondevik</questionalternative>
+          <questionalternative id="D">Gro Harlem Brundtland</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Erna Solberg är rätt svar. Hon har varit Norges statsminister sedan den 16 oktober 2013.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Norges_statsminister
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>2</questionno>
+        <questiontext>Vad heter Danmarks nuvarande statsminister?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Anders Fogh Rasmussen</questionalternative>
+          <questionalternative id="C">Poul Nyrup Rasmussen</questionalternative>
+          <questionalternative id="D">Poul Schlüter</questionalternative>
+          <questionalternative id="A">Helle Thorning-Schmidt</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Helle Thorning-Schmidt är rätt svar. Hon har varit Danmarks statsminister sedan den 3 oktober 2011.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Danmarks_statsminister
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>3</questionno>
+        <questiontext>Vad heter Finlands president?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Tarja Halonen</questionalternative>
+          <questionalternative id="C">Martti Ahtisaari</questionalternative>
+          <questionalternative id="D">Mauno Koivisto</questionalternative>
+          <questionalternative id="A">Sauli Niinistö</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Sauli Niinistö är rätt svar. Han har varit Finlands president sedan den 1 mars 2012.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Lista_%C3%B6ver_Finlands_stats%C3%B6verhuvuden
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>4</questionno>
+        <questiontext>Vad heter Islands nuvarande statsminister?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Geir Haarde</questionalternative>
+          <questionalternative id="A">Sigmundur David Gunnlaugsson</questionalternative>
+          <questionalternative id="D">Steingrimur Hermannson</questionalternative>
+          <questionalternative id="C">Gunnar Thoroddsen</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Sigmundur David Gunnlaugsson är rätt svar. Han har varit Islands statsminister sedan den 23 maj 2013.</answercomment>
+          <sourcelink>
+            http://sv.wikipedia.org/wiki/Islands_statsminister
+          </sourcelink>
+          <sourcetext>Wikipedia</sourcetext>
+        </answer>
+      </question>
+    </questions>
+  </quiz>
+</politicsquizzes>
