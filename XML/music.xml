@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<musicquizzes>
+  <quiz>
+    <quiznumber>0</quiznumber>
+    <quizname>SVENSKA GRAMMISVINNARE - ÅRETS ALBUM</quizname>
+    <questions>
+      <question>
+        <questionno>1</questionno>
+        <questiontext>Vilket band/vilken artist vann årets album 2013?</questiontext>
+        <questionalternatives>
+          <questionalternative id="D">Icona Pop</questionalternative>
+          <questionalternative id="B">Timbuktu</questionalternative>
+          <questionalternative id="C">The Soundtrack Of Our Lives</questionalternative>
+          <questionalternative id="A">First Aid Kit</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>First Aid Kit vann med albumet The Lion's Roar.</answercomment>
+          <sourcelink>
+            http://www.ifpi.se/wp-content/uploads/100428-lc-vinnare-genom-%C3%A5ren1.pdf
+          </sourcelink>
+          <sourcetext>IFPI Sverige</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>2</questionno>
+        <questiontext>Vilket band/vilken artist vann årets album 2012?</questiontext>
+        <questionalternatives>
+          <questionalternative id="B">Aviici</questionalternative>
+          <questionalternative id="A">Lykke Li</questionalternative>
+          <questionalternative id="D">Veronica Maggio</questionalternative>
+          <questionalternative id="C">Deportees</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Lykke Li vann med albumet Wounded Rhymes.</answercomment>
+          <sourcelink>
+            http://www.ifpi.se/wp-content/uploads/100428-lc-vinnare-genom-%C3%A5ren1.pdf
+          </sourcelink>
+          <sourcetext>IFPI Sverige</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>3</questionno>
+        <questiontext>Vilket band/vilken artist vann årets album 2011?</questiontext>
+        <questionalternatives>
+          <questionalternative id="A">Robyn</questionalternative>
+          <questionalternative id="C">Håkan Hellström</questionalternative>
+          <questionalternative id="D">Oskar Linnros</questionalternative>
+          <questionalternative id="B">RedOne</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Robyn vann med albumet Body Talk.</answercomment>
+          <sourcelink>
+            http://www.ifpi.se/wp-content/uploads/100428-lc-vinnare-genom-%C3%A5ren1.pdf
+          </sourcelink>
+          <sourcetext>IFPI Sverige</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>4</questionno>
+        <questiontext>Vilket band/vilken artist vann årets album 2010?</questiontext>
+        <questionalternatives>
+          <questionalternative id="C">Lars Winnerbäck</questionalternative>
+          <questionalternative id="A">Thåström</questionalternative>
+          <questionalternative id="D">Amanda Jenssen</questionalternative>
+          <questionalternative id="B">Mando Diao</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Thåström vann med albumet Kärlek är för dom.</answercomment>
+          <sourcelink>
+            http://www.ifpi.se/wp-content/uploads/100428-lc-vinnare-genom-%C3%A5ren1.pdf
+          </sourcelink>
+          <sourcetext>IFPI Sverige</sourcetext>
+        </answer>
+      </question>
+      <question>
+        <questionno>5</questionno>
+        <questiontext>Vilket band/vilken artist vann årets album 2009?</questiontext>
+        <questionalternatives>
+          <questionalternative id="A">Anna Ternheim</questionalternative>
+          <questionalternative id="C">In Flames</questionalternative>
+          <questionalternative id="D">E.M.D.</questionalternative>
+          <questionalternative id="B">Kleerup</questionalternative>
+        </questionalternatives>
+        <answer>
+          <answercomment>Anna Ternheim vann med albumet Leaving On A Mayday.</answercomment>
+          <sourcelink>
+            http://www.ifpi.se/wp-content/uploads/100428-lc-vinnare-genom-%C3%A5ren1.pdf
+          </sourcelink>
+          <sourcetext>IFPI Sverige</sourcetext>
+        </answer>
+      </question>
+    </questions>
+  </quiz>
+</musicquizzes>
