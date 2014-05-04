@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title>Slutuppgift</title>
+    <meta charset="UTF-8" />
+    <link rel="Stylesheet" media="screen and (min-width:481px)" type="text/css" href="../css/quizmain.css" />
+    <meta name="viewport" content="width:device-width, initial scale=1.0, user scalable=false" />
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="nav">
+                <div id="loginmenu">
+                    <ul>
+                        <li><a href="profile.html">Profil</a></li>
+                        <li><a href="edit.html">Redigera profil</a></li>
+                        <li><a href="played.html">Spelade quiz</a></li>
+                        <li><a href="made.html">Skapade quiz</a></li>
+                        <li><a href="createquiz.html">Skapa quiz</a></li>
+                        <li><a href="start.html">Logga ut</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div id="categories">
+            <ul>
+                <li><a href="politik.html">Politik</a></li>
+                <li class="active"><a href="musik.html">Musik</a></li>
+                <li><a href="#">Film & TV</a></li>
+                <li><a href="#">Geografi</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Biologi</a></li>
+                <li><a href="#">Litteratur</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="formsearch">
+                <form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbintro/form.php" method="post">
+                <div id="fieldsetsearch">
+                    <fieldset>
+                        <legend>Sök</legend>
+                        <label for="search">
+                            <a href="#">Sök</a></label>
+                        <input class="textbox" type="text" id="search" name="search" />
+                        <br />
+                    </fieldset>
+                </div>
+                </form>
+            </div>
+            <div id="sortbuttons">
+                <ul>
+                    <li><a href="#">Bokstavsordning</a></li>
+                    <li><a href="#">Nyaste först</a></li>
+                </ul>
+            </div>
+            <div id="subcategorytable">
+                <table>
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Underkategorier:
+                            </td>
+                            <td>
+                                <a href="#">Amerikansk musik</a>
+                            </td>
+                            <td>
+                                <a href="#">Europeisk musik</a>
+                            </td>
+                            <td>
+                                <a href="#quizzes">Svensk musik</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="quizzes">
+                <h1>
+                    SVENSK MUSIK</h1>
+                <p>
+                    <a href="grammisvinnarealbum.html">SVENSKA GRAMMISVINNARE - ÅRETS ALBUM</a></p>
+                <p>
+                    Betyg: 3/5</p>
+            </div>
+        </div>
+        <footer>
+           &copy; 2013 Quiz.se
+        </footer>
+    </div>
+</body>
+</html>
