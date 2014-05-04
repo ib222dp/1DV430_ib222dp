@@ -9,16 +9,24 @@ var Quiz = {
 
     init: function () {
 
+        //Hämtar klass för div "content" för att avgöra vilken XML-fil som ska läsas in
+        var contentClass = document.getElementById("content").getAttribute("class");
+        var url = "../XML/" + contentClass + ".xml";
+
         //Öppnar XML-filen (http://stackoverflow.com/questions/22495746/using-javascript-to-show-xml-info-in-html-webpage?rq=1)
         var xhr = new XMLHttpRequest();
-
-        xhr.open("GET", "../XML/politicsquizzes.xml", false);
-        xhr.send();
+        xhr.open("get", url, false);
+        xhr.send(null);
         var xmlDoc = xhr.responseXML;
 
         //Hämtar quizzets klass för att avgöra vilket quiz som ska läsas in
         var quizNo = document.getElementById("quiz").getAttribute("class");
         var quiz = xmlDoc.getElementsByTagName("quiz")[quizNo];
+
+        Quiz.question(quiz);
+    },
+
+    question: function (quiz) {
 
         //Läser in frågans nr samt antal frågor och skriver ut det i DOM:en
         var questionNoP = document.createElement("p");
@@ -48,7 +56,7 @@ var Quiz = {
             aTag.setAttribute("class", alternatives.getElementsByTagName("questionalternative")[i].textContent);
             aTag.innerHTML = alternatives.getElementsByTagName("questionalternative")[i].textContent;
             aTag.onclick = function (e) {
-                Quiz.answerWindow(e, quiz);
+                Quiz.answer(e, quiz);
             };
             var liTag = document.createElement("li");
             liTag.appendChild(aTag);
@@ -59,7 +67,7 @@ var Quiz = {
     },
 
     //Funktion som ändrar innehållet i "content" när något av svarsalternativen klickas på
-    answerWindow: function (e, quiz) {
+    answer: function (e, quiz) {
         e.preventDefault();
 
         //Skapar div "answertext"
@@ -108,36 +116,35 @@ var Quiz = {
 
         //Tar bort frågetext och svarsalternativ
         var questionTextDiv = document.getElementById("questiontext");
-        var questionTextP = document.querySelector("#questiontext p");
-        questionTextDiv.removeChild(questionTextP);
+        questionTextDiv.removeChild(document.querySelector("#questiontext p"));
+        questionTextDiv.removeChild(document.getElementById("alternatives"));
 
-        var alternatives = document.getElementById("alternatives");
-        document.getElementById("questiontext").removeChild(alternatives);
-
-        //Visar "Nästa"/"Avsluta"-knappen
-        var nextButton = document.getElementById("nextbutton");
-        nextButton.removeAttribute("class", "hidden");
-        var nextButtonA = document.querySelector("#nextbutton a");
-
+        //Visar "Nästa"-knappen tills den sista frågan i xml-filen har nåtts, då div "quizendmenu" istället visas
         if (Quiz.a < (quiz.getElementsByTagName("questions")[0].children.length) - 1) {
-            nextButtonA.innerHTML = "Nästa";
+            var nextButton = document.getElementById("nextbutton");
+            nextButton.removeAttribute("class", "hidden");
+            //Händelsehanterare kopplad till "Nästa"-knappen
+            nextButton.onclick = function () {
+                Quiz.next(quiz);
+            };
         } else {
-            nextButtonA.innerHTML = "Avsluta";
+            //Skickar antal rätt till PHP-skript som skriver resultatet till XML-filen
+            //(http://stackoverflow.com/questions/1917576/how-to-pass-javascript-variables-to-php)
+            var xhr = new XMLHttpRequest();
+            var urlToSend = "PHP/savestats.php?amountCorrect=" + Quiz.amountQCorrect;
+            xhr.open("post", "PHP/savestats.php", true);
+            xhr.send(urlToSend);
+            document.getElementById("quizendmenu").removeAttribute("class", "hidden");
         }
-
-        //Händelsehanterare kopplad till "Nästa"/"Avsluta"-knappen
-        nextButton.onclick = function () {
-            Quiz.contFunction(quiz);
-        };
     },
 
-    //Funktion som anropas när "Nästa"/"Avsluta"-knappen klickats på
-    contFunction: function (quiz) {
+    //Funktion som anropas när "Nästa"-knappen klickats på
+    next: function (quiz) {
 
-        //Döljer "Nästa"/"Avsluta"-knappen
+        //Döljer "Nästa"-knappen
         document.getElementById("nextbutton").setAttribute("class", "hidden");
 
-        //Anropar init-funktionen tills den sista frågan i xml-filen har nåtts
+        //Anropar question-funktionen tills den sista frågan i xml-filen har nåtts
         if (Quiz.a < (quiz.getElementsByTagName("questions")[0].children.length) - 1) {
 
             //Tar bort frågans nummer
@@ -154,9 +161,7 @@ var Quiz = {
             document.getElementById("question").removeChild(answertext);
 
             Quiz.a++;
-            Quiz.init();
-        } else {
-            document.getElementById("quizendmenu").removeAttribute("class", "hidden");
+            Quiz.question(quiz);
         }
     }
 };
@@ -167,10 +172,5 @@ window.onload = Quiz.init;
 
 
 //http://stackoverflow.com/questions/2154801/childnodes-not-working-in-firefox-and-chrome-but-working-in-ie
-//var quizNameH1 = document.createElement("p");
 //quizNameH1.innerHTML = xmlDoc.getElementsByTagName("quizname")[0].textContent; (fungerar FF, Chrome)
 //quizNameH1.innerHTML = quiz.childNodes[0].text; (fungerar IE)
-//document.getElementById("quiz").appendChild(quizNameH1);
-
-
-//alternatives = quiz.getElementsByTagName("questionalternatives")[Quiz.a].children,
