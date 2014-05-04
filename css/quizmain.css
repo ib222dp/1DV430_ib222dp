@@ -251,31 +251,7 @@ header
 /*Quizzes*/
 #quizzes
 {
-    width: 280px;
     margin-top: 30px;
-    overflow: auto;
-}
-#quizzesright
-{
-    width: 200px;
-    height: 96px;
-    float: right;
-    overflow: auto;
-}
-#quizzes img
-{
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-    float: left;
-}
-#quizzes h1
-{
-    padding: 20px 0px 20px 0px;
-}
-#quizzesright p
-{
-    padding: 0px 0px 13px 0px;
 }
 /*Quiz*/
 #quiz, #questionright
