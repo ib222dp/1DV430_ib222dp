@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<musicquizzes>
-  <quiz>
+<quizzes>
+  <quiz name="Svenska Grammisvinnare - Årets album" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/grammisvinnarealbum.html" created="2014-03-01">
     <quiznumber>0</quiznumber>
-    <quizname>SVENSKA GRAMMISVINNARE - ÅRETS ALBUM</quizname>
     <questions>
       <question>
         <questionno>1</questionno>
@@ -90,5 +89,16 @@
         </answer>
       </question>
     </questions>
+    <timesplayed>0</timesplayed>
+    <results></results>
   </quiz>
-</musicquizzes>
+  <quiz name="Norska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2013-03-04">
+    <quiznumber>1</quiznumber>
+  </quiz>
+  <quiz name="Danska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2012-10-06">
+    <quiznumber>2</quiznumber>
+  </quiz>
+  <quiz name="Finska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2012-11-08">
+    <quiznumber>3</quiznumber>
+  </quiz>
+</quizzes>
