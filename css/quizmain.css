@@ -189,24 +189,24 @@ header
     margin-left: 20px;
 }
 /*LINKS*/
-/*Starttext, Quizzes, Subcategories, Answertext, Questionright*/
-#starttext a, #quizzes a, #subcategories a, #answertext a, #subcategorytable a
+/*Starttext, Quizzes, Answertext*/
+#starttext a, #quizzes a, #answertext a
 {
     color: Blue;
 }
-#starttext a:hover, #quizzes a:hover, #subcategories a:hover, #answertext a:hover, #subcategorytable a:hover
+#starttext a:hover, #quizzes a:hover, #answertext a:hover
 {
     color: Purple;
 }
-#starttext a:visited, #quizzes a:visited, #subcategories a:visited, #answertext a:visited, #subcategorytable a:visited
+#starttext a:visited, #quizzes a:visited, #answertext a:visited
 {
     color: Purple;
 }
-#starttext a:focus, #quizzes a:focus, #subcategories a:focus, #answertext a:focus, #subcategorytable a:focus
+#starttext a:focus, #quizzes a:focus, #answertext a:focus
 {
     color: Red;
 }
-/*CONTENT* *ANSWERPOPUP*/
+/*CONTENT*/
 #content, #contentnoheight
 {
     width: 960px;
@@ -251,7 +251,7 @@ header
 /*Quizzes*/
 #quizzes
 {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 /*Quiz*/
 #quiz, #questionright
@@ -412,7 +412,7 @@ header
     font-size: xx-large;
     background-color: #3282c2;
 }
-/*TABLES*/
+/*TABLE*/
 #profiletable
 {
     width: 600px;
@@ -434,17 +434,6 @@ header
     font-style: normal;
     font-family: "Franklin Gothic", Sans-Serif;
     text-align: left;
-}
-#subcategorytable
-{
-    margin-top: 30px;
-}
-#subcategorytable td
-{
-    font-weight: bold;
-    font-family: "Cooper Std Black", Serif;
-    text-align: left;
-    padding: 10px 10px 10px 0px;
 }
 /*FOOTER*/
 footer
