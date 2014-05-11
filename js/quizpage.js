@@ -30,7 +30,7 @@ var Quiz = {
 
         //Läser in frågans nr samt antal frågor och skriver ut det i DOM:en
         var questionNoP = document.createElement("p");
-        questionNoP.innerHTML = "Fråga " + quiz.getElementsByTagName("questionno")[Quiz.a].textContent + " av " + quiz.getElementsByTagName("questions")[0].children.length;
+        questionNoP.innerHTML = "Fråga " + (quiz.getElementsByTagName("questionno")[Quiz.a].textContent) + " av " + (quiz.getElementsByTagName("questions")[0].children.length);
         document.getElementById("questionno").appendChild(questionNoP);
 
         //Skriver ut antal rätt av antal frågor
@@ -128,13 +128,24 @@ var Quiz = {
                 Quiz.next(quiz);
             };
         } else {
-            //Skickar antal rätt till PHP-skript som skriver resultatet till XML-filen
+            //Skickar antal rätt, klass för div content samt klass för quiz till PHP-skript för att skriva resultatet till rätt quiz i rätt XML-fil
             //(http://stackoverflow.com/questions/1917576/how-to-pass-javascript-variables-to-php)
+            //(http://stackoverflow.com/questions/1600360/passing-multiple-parameter-to-php-from-javascript)
+            var timesPlayed = quiz.getElementsByTagName("timesplayed")[0].textContent;
+            var intTimesPlayed = parseInt(timesPlayed);
+            intTimesPlayed += 1;
+            var url = "../PHP/savestats.php";
+            var params = "amountCorrect=" + Quiz.amountQCorrect + "&contentClass=" + document.getElementById("content").getAttribute("class") + "&quizNo=" + document.getElementById("quiz").getAttribute("class") + "&timesPlayed=" + intTimesPlayed;
             var xhr = new XMLHttpRequest();
-            var urlToSend = "PHP/savestats.php?amountCorrect=" + Quiz.amountQCorrect;
-            xhr.open("post", "PHP/savestats.php", true);
-            xhr.send(urlToSend);
-            document.getElementById("quizendmenu").removeAttribute("class", "hidden");
+            xhr.open("get", url + "?" + params, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        document.getElementById("quizendmenu").removeAttribute("class", "hidden");
+                    }
+                }
+            };
+            xhr.send(null);
         }
     },
 
