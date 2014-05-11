@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<politicsquizzes>
-  <quiz>
+<quizzes>
+  <quiz name="Svenska politiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/svenskapolitiker.html" created="2013-09-01">
     <quiznumber>0</quiznumber>
-    <quizname>SVENSKA POLITIKER</quizname>
     <questions>
       <question>
         <questionno>1</questionno>
@@ -56,10 +55,11 @@
         </answer>
       </question>
     </questions>
+    <timesplayed>0</timesplayed>
+    <results></results>
   </quiz>
-  <quiz>
+  <quiz name="Nordiska politiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/nordiskapolitiker.html" created="2014-05-01">
     <quiznumber>1</quiznumber>
-    <quizname>NORDISKA POLITIKER</quizname>
     <questions>
       <question>
         <questionno>1</questionno>
@@ -130,5 +130,16 @@
         </answer>
       </question>
     </questions>
+    <timesplayed>0</timesplayed>
+    <results></results>
   </quiz>
-</politicsquizzes>
+  <quiz name="Svenska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2013-04-01">
+    <quiznumber>2</quiznumber>
+  </quiz>
+  <quiz name ="Danska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2014-02-01">
+    <quiznumber>3</quiznumber>
+  </quiz>
+  <quiz name="Finska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2014-02-05">
+    <quiznumber>4</quiznumber>
+  </quiz>
+</quizzes>
