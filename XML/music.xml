@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <quizzes>
-  <quiz name="Svenska Grammisvinnare - Årets album" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/grammisvinnarealbum.html" created="2014-03-01">
+  <quiz name="Svenska Grammisvinnare - Årets album" url="../slutuppgift/grammisvinnarealbum.html" created="2014-03-01">
     <quiznumber>0</quiznumber>
     <questions>
       <question>
@@ -89,16 +89,31 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>0</timesplayed>
-    <results></results>
+    <timesplayed>20</timesplayed>
+    <times0correct>5</times0correct>
+    <timesxcorrectcount>
+      <timesxcorrect>15</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+    </timesxcorrectcount>
+    <ratings>
+      <rating>4</rating>
+      <rating>1</rating>
+      <rating>0</rating>
+      <rating>1</rating>
+      <rating>0</rating>
+    </ratings>
+    <comments/>
   </quiz>
-  <quiz name="Norska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2013-03-04">
+  <quiz name="Norska musiker" url="#" created="2013-03-04">
     <quiznumber>1</quiznumber>
   </quiz>
-  <quiz name="Danska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2012-10-06">
+  <quiz name="Danska musiker" url="#" created="2012-10-06">
     <quiznumber>2</quiznumber>
   </quiz>
-  <quiz name="Finska musiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/musik.html" created="2012-11-08">
+  <quiz name="Finska musiker" url="#" created="2012-11-08">
     <quiznumber>3</quiznumber>
   </quiz>
 </quizzes>
