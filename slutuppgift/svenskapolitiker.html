@@ -10,16 +10,6 @@
     <div id="container">
         <header>
             <div id="nav">
-                <div id="loginmenu">
-                    <ul>
-                        <li><a href="profile.html">Profil</a></li>
-                        <li><a href="edit.html">Redigera profil</a></li>
-                        <li><a href="played.html">Spelade quiz</a></li>
-                        <li><a href="made.html">Skapade quiz</a></li>
-                        <li><a href="createquiz.html">Skapa quiz</a></li>
-                        <li><a href="start.html">Logga ut</a></li>
-                    </ul>
-                </div>
             </div>
         </header>
         <div id="categories">
@@ -49,17 +39,92 @@
                     <a href="#">Nästa</a>
                 </div>
             </div>
-            <div id="questionright">
+            <div id="quizmenu">
                 <div id="quizendmenu" class="hidden">
-                    <a href="svenskapolitiker.html">Spela igen</a> <a href="#">Kommentera</a> <a href="#">
-                        Betygsätt</a> <a href="#">Statistik</a>
+                    <ul>
+                        <li><a href="svenskapolitiker.html">Spela igen</a></li>
+                        <li><a id="commentbutton" href="#">Kommentarer</a> </li>
+                        <li><a id="ratingbutton" href="#">Betygsätt</a></li>
+                        <li><a id="statbutton" href="#">Statistik</a></li>
+                    </ul>
                 </div>
+            </div>
+            <div id="commentdiv" class="hidden">
+                <h1>
+                    KOMMENTARER</h1>
+                <p id="nocommentsp">
+                </p>
+                <dl id="commentsdl">
+                </dl>
+                <form action="#" method="post" id="commentform">
+                <div id="fieldsetcomments">
+                    <fieldset>
+                        <legend>Skriv kommentar</legend>
+                        <label for="comment">
+                            Skriv kommentar:</label>
+                        <textarea class="textarea" id="comment" name="comment" rows="5" cols="28"></textarea>
+                        <br />
+                        <label for="username">
+                            Namn:</label>
+                        <input class="textbox" type="text" id="username" name="username" />
+                    </fieldset>
+                </div>
+                <div id="buttons">
+                    <ul>
+                        <li><a id="commentclear" href="#">Rensa</a></li>
+                        <li><a id="commentsubmit" href="#">Skicka</a></li>
+                    </ul>
+                </div>
+                </form>
+            </div>
+            <div id="ratingdiv" class="hidden">
+                <h1>
+                    BETYG</h1>
+                <p id="ratingp">
+                </p>
+                <form action="#" method="post" id="ratingform">
+                <div id="fieldsetrating">
+                    <fieldset>
+                        <legend>Välj ett betygsalternativ</legend>
+                        <div id="radiobuttons">
+                            <input id="one" type="radio" value="1" name="rating">
+                            1 av 5
+                            <br>
+                            <input id="two" type="radio" value="2" name="rating">
+                            2 av 5
+                            <br>
+                            <input id="three" type="radio" value="3" name="rating">
+                            3 av 5
+                            <br>
+                            <input id="four" type="radio" value="4" name="rating">
+                            4 av 5
+                            <br>
+                            <input id="five" type="radio" value="5" name="rating">
+                            5 av 5
+                            <br>
+                        </div>
+                    </fieldset>
+                </div>
+                <button id="ratingsubmit" class="formbutton" type="button">
+                    Skicka</button>
+                </form>
+                <p id="valp" class="hidden">
+                    Du måste välja ett av betygsalternativen.</p>
+            </div>
+            <div id="statdiv" class="hidden">
+                <h1>
+                    STATISTIK</h1>
+                <p id="statsp">
+                </p>
+                <ul id="statsul">
+                </ul>
             </div>
         </div>
         <footer>
-             &copy; 2013 Quiz.se
+             &copy; 2014 Quiz.se
         </footer>
     </div>
     <script src="../js/quizpage.js"></script>
+    <script src="../js/AjaxCon.js"></script>
 </body>
 </html>
