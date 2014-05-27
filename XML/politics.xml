@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <quizzes>
-  <quiz name="Svenska politiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/svenskapolitiker.html" created="2013-09-01">
+  <quiz name="Svenska politiker" url="../slutuppgift/svenskapolitiker.html" created="2013-09-01">
     <quiznumber>0</quiznumber>
     <questions>
       <question>
@@ -55,10 +55,32 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>0</timesplayed>
-    <results></results>
+    <timesplayed>159</timesplayed>
+    <times0correct>1</times0correct>
+    <timesxcorrectcount>
+      <timesxcorrect>3</timesxcorrect>
+      <timesxcorrect>144</timesxcorrect>
+      <timesxcorrect>11</timesxcorrect>
+    </timesxcorrectcount>
+    <ratings>
+      <rating>11</rating>
+      <rating>12</rating>
+      <rating>10</rating>
+      <rating>23</rating>
+      <rating>34</rating>
+    </ratings>
+    <comments>
+      <comment>
+        <commenttext>Testkommentar 1</commenttext>
+        <commenter>Testare1</commenter>
+      </comment>
+      <comment>
+        <commenttext>Testkommentar 2</commenttext>
+        <commenter>Testare2</commenter>
+      </comment>
+    </comments>
   </quiz>
-  <quiz name="Nordiska politiker" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/nordiskapolitiker.html" created="2014-05-01">
+  <quiz name="Nordiska politiker" url="../slutuppgift/nordiskapolitiker.html" created="2014-05-01">
     <quiznumber>1</quiznumber>
     <questions>
       <question>
@@ -130,16 +152,30 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>0</timesplayed>
-    <results></results>
+    <timesplayed>23</timesplayed>
+    <times0correct>0</times0correct>
+    <timesxcorrectcount>
+      <timesxcorrect>0</timesxcorrect>
+      <timesxcorrect>22</timesxcorrect>
+      <timesxcorrect>1</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+    </timesxcorrectcount>
+    <ratings>
+      <rating>3</rating>
+      <rating>1</rating>
+      <rating>2</rating>
+      <rating>1</rating>
+      <rating>0</rating>
+    </ratings>
+    <comments/>
   </quiz>
-  <quiz name="Svenska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2013-04-01">
+  <quiz name="Svenska partier" url="#" created="2013-04-01">
     <quiznumber>2</quiznumber>
   </quiz>
-  <quiz name ="Danska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2014-02-01">
+  <quiz name="Danska partier" url="#" created="2014-02-01">
     <quiznumber>3</quiznumber>
   </quiz>
-  <quiz name="Finska partier" url="http://homepage.lnu.se/student/ib222dp/slutuppgift/politik.html" created="2014-02-05">
+  <quiz name="Finska partier" url="#" created="2014-02-05">
     <quiznumber>4</quiznumber>
   </quiz>
 </quizzes>
