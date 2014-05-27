@@ -141,9 +141,6 @@ var Quiz = {
             //Skapande av en ny AjaxCon-instans
             new AjaxCon(url, function (data) {
                 document.getElementById("quizendmenu").removeAttribute("class", "hidden");
-                //Aktiverar "Skicka"-knappen i "Betygsätt"-formuläret
-                var ratingSubmit = document.getElementById("ratingsubmit");
-                ratingSubmit.disabled = false;
                 Quiz.endmenu(quiz, contentClass, quizNo);
             });
         }
