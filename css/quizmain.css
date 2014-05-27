@@ -66,12 +66,15 @@ header
     background-repeat: no-repeat;
 }
 /* NAVIGATION */
-#nav
+#nav, #quizmenu
 {
     height: 100px;
+}
+#nav
+{
     float: right;
 }
-#loginmenu
+#loginmenu, #quizendmenu
 {
     width: 775px;
 }
@@ -80,7 +83,7 @@ header
     float: left;
 }
 /*MENUBUTTONS (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
-#loginmenu a, #categories a, #logon a, #buttons a, #profilebuttons a, #sortbuttons a, #quizendmenu a, #questiontext a, #nextbutton a
+#loginmenu a, #categories a, #logon a, #buttons a, #profilebuttons a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
 {
     height: 20px;
     display: block;
@@ -94,16 +97,16 @@ header
 #loginmenu a:hover, #categories a:hover, #logon a:hover
 {
     background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
-    background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690)); 
+    background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690));
     background-color: #298a40;
 }
 #loginmenu .active a, #categories .active a, #logon .active a
 {
     background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
-    background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690)); 
+    background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690));
     background-color: #298a40;
 }
-#buttons a, #profilebuttons a, #sortbuttons a, #quizendmenu a, #questiontext a, #nextbutton a
+#buttons a, #profilebuttons a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
 {
     padding: 10px 0px 10px 0px;
     background-color: #817dda;
@@ -112,20 +115,20 @@ header
     -moz-box-shadow: 3px 3px 3px #333;
     box-shadow: 3px 3px 3px #333;
 }
-#buttons a:hover, #profilebuttons a:hover, #sortbuttons a:hover, #quizendmenu a:hover, #questiontext a:hover, #nextbutton a:hover, #formsearch a:hover
+#buttons a:hover, #profilebuttons a:hover, #sortbuttons a:hover, #questiontext a:hover, #nextbutton a:hover, #formsearch a:hover, #quizendmenu a:hover
 {
     background-color: #6cd7af;
-} 
+}
 /*Loginmenu, categories, logon (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
-#loginmenu li, #categories, #categories li, #logon li
+#loginmenu li, #categories, #categories li, #logon li, #quizendmenu li
 {
     width: 150px;
 }
-#loginmenu li, #categories li
+#loginmenu li, #categories li, #quizendmenu li
 {
     margin-top: 5px;
 }
-#loginmenu li, #logon li
+#loginmenu li, #logon li, #quizendmenu li
 {
     margin-left: 5px;
     float: right;
@@ -138,13 +141,13 @@ header
     background: -webkit-gradient(linear, center top, center bottom, from(#a4ccec), color-stop(25%, #72a6d4), color-stop(45%, #3282c2), color-stop(85%, #357cbd), to(#72a6d4));
     background-color: #3282c2;
     color: #FFFFFF;
-    font-family: "Cooper Std Black", Serif;
+    font-family: "Cooper Std Black" , Serif;
 }
 #logon a
 {
     margin-top: 65px;
 }
-/*Buttons, Profilebuttons, Quizendmenu, Answer, Questiontext*/
+/*Buttons, Sortbuttons, Profilebuttons, Questiontext, Nextbutton*/
 #buttons
 {
     width: 500px;
@@ -181,8 +184,7 @@ header
     width: 280px;
     margin-right: 10px;
 }
-
-#questiontext a, #nextbutton a, #quizendmenu a
+#questiontext a, #nextbutton a
 {
     width: 400px;
     margin-top: 10px;
@@ -207,7 +209,7 @@ header
     color: Red;
 }
 /*CONTENT*/
-#content, #contentnoheight
+#content, #contentheight
 {
     width: 960px;
     padding: 30px;
@@ -221,77 +223,65 @@ header
     margin: 7px 0px 7px 180px;
     overflow: auto;
 }
-#content
+#contentheight
 {
-    height: 550px;
+    height: 430px;
 }
 /*TEXT*/
-#content h1, h2, #contentnoheight h1, h2, #results p
+#content h1, h2, #contentheight h1, h2
 {
-    font-family: "Cooper Std Black", Serif;
+    font-family: "Cooper Std Black" , Serif;
     font-weight: bold;
 }
-#content a, #contentnoheight a, p, #question p, #quiz p, #answertext a, p, #starttext p, #created p, #quizzes p
+#content a, #contentheight a, p, #question p, #quiz p, #answertext a, p, #starttext p, #created p, #quizzes p, #commentdiv p, dt, #ratingdiv p, #statdiv p, #statsul
 {
-    font-family: "Franklin Gothic", Sans-Serif;
+    font-family: "Franklin Gothic" , Sans-Serif;
     font-weight: bold;
     line-height: 120%;
 }
-#question h1, h2, p, #quiz h1, p, #answertext a, p, #starttext h1, p
+#commentdiv dt
+{
+    font-style: italic;
+    width: 896px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+#commentdiv dd
+{
+    font-family: "Franklin Gothic" , Sans-Serif;
+    font-weight: normal;
+    line-height: 120%;
+    font-style: normal;
+    margin-left: 20px;
+}
+#question h1, h2, p, #quiz h1, p, #answertext a, p, #starttext h1, p, #commentdiv h1, p, #ratingdiv h1, p, #statdiv h1, p, #statsul
 {
     padding: 20px;
 }
-#questionright p
+#statsul li
 {
-    padding: 5px 5px 5px 40px;
-    font-family: "Franklin Gothic", Sans-Serif;
-    font-size: 100%;
-    width: 200px;
+    padding-top: 10px;
 }
 /*Quizzes*/
 #quizzes
 {
     margin-top: 15px;
 }
-/*Quiz*/
-#quiz, #questionright
-{
-    width: 480px;
-    height: 550px;
-    overflow: auto;
-}
-#quiz
-{
-    float: left;
-}
-/*IMAGES*/
-#questionright img, #profileright img
-{
-    -webkit-border-radius: 1.6em;
-    -moz-border-radius: 1.6em;
-    border-radius: 1.6em;
-    -webkit-box-shadow: 7px 7px 7px #333;
-    -moz-box-shadow: 7px 7px 7px #333;
-    box-shadow: 7px 7px 7px #333;
-}
-#questionright img
-{
-    margin: 20px 40px 20px 40px;
-}
-#profileright img
-{
-    float: right;
-}
-#answer img
-{
-    padding-left: 15px;
-}
 /*FORMS*/
-#form
+#form, #commentform, #ratingform
 {
     width: 500px;
 }
-#fieldsetedit, #fieldsetcreate, #fieldsetquiz
+#commentform, #ratingform
+{
+    padding: 20px;
+}
+#fieldsetedit, #fieldsetcreate, #fieldsetquiz, #fieldsetcomments, #fieldsetrating
 {
     width: 500px;
     -moz-border-radius: 8px;
@@ -308,41 +298,48 @@ header
     width: 600px;
     height: 50px;
 }
-#form label, #formlogon label, #formsearch label, #formquiz label
+#form label, #formlogon label, #formsearch label, #formquiz label, #commentform label
 {
     width: 170px;
     display: block;
     padding-right: 10px;
     text-align: right;
     clear: left;
-    font-family: "Franklin Gothic", Sans-Serif;
+    font-family: "Franklin Gothic" , Sans-Serif;
     font-weight: bold;
 }
-#form label, #formlogon label, #formquiz label
+#radiobuttons
 {
-      float: left;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    font-family: "Franklin Gothic" , Sans-Serif;
+    font-weight: bold;
+}
+#form label, #formlogon label, #formquiz label, #commentform label
+{
+    float: left;
 }
 #formsearch label
 {
-     float: right;
+    float: right;
 }
 #formlogon label
 {
     color: #FFFFFF;
 }
-#form .textbox, #form .textarea, #formlogon .textbox, #formsearch .textbox, #formquiz .textbox, #formquiz .textarea, #formquiz .select
+#form .textbox, #form .textarea, #formlogon .textbox, #formsearch .textbox, #formquiz .textbox, #formquiz .textarea, #formquiz .select, #commentform .textarea, #commentform .textbox
 {
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
 }
-#form .textbox, #form .textarea, #formquiz .textbox, #formquiz .textarea, #formquiz .select
+#form .textbox, #form .textarea, #formquiz .textbox, #formquiz .textarea, #formquiz .select, #commentform .textbox, #commentform .textarea
 {
     width: 300px;
     margin-bottom: 20px;
     border: 1px solid;
 }
-#form .textarea, #formquiz .textarea
+#form .textarea, #formquiz .textarea, #commentform .textarea
 {
     height: 100px;
 }
@@ -351,15 +348,15 @@ header
     width: 100px;
     margin-bottom: 5px;
 }
-#form legend, #formquiz legend
+#form legend, #formquiz legend, #ratingform legend
 {
     padding: 15px;
     padding-bottom: 25px;
-    font-family: "Cooper Std Black", Serif;
+    font-family: "Cooper Std Black" , Serif;
     font-weight: bolder;
     font-size: 150%;
 }
-#formlogon legend, #formsearch legend
+#formlogon legend, #formsearch legend, #commentform legend
 {
     visibility: hidden;
 }
@@ -374,7 +371,7 @@ header
     height: 20px;
 }
 #formsearch label
-{ 
+{
     width: 65px;
     height: 20px;
 }
@@ -389,6 +386,55 @@ header
     -moz-border-radius: 1.6em;
     -webkit-border-radius: 1.6em;
     border-radius: 1.6em;
+}
+#ratingform .formbutton
+{
+    height: 40px;
+    margin-left: 402px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100px;
+    -webkit-box-shadow: 3px 3px 3px #333;
+    -moz-box-shadow: 3px 3px 3px #333;
+    box-shadow: 3px 3px 3px #333;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 100%;
+    background-color: #817dda;
+    color: #000000;
+    font-family: "Franklin Gothic" , Sans-Serif;
+    font-weight: bold;
+    line-height: 120%;
+}
+#ratingform .formbutton:hover
+{
+     background-color: #6cd7af;
+}
+.transparent
+{
+    opacity: 0.2;
+    height: 40px;
+    margin-left: 402px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100px;
+    -webkit-box-shadow: 3px 3px 3px #333;
+    -moz-box-shadow: 3px 3px 3px #333;
+    box-shadow: 3px 3px 3px #333;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 100%;
+    background-color: #817dda;
+    color: #000000;
+    font-family: "Franklin Gothic" , Sans-Serif;
+    font-weight: bold;
+    line-height: 120%;
+}
+.transparent:hover
+{
+    background-color: #817dda;
 }
 /*Profile*/
 #profileleft
@@ -412,6 +458,16 @@ header
     font-size: xx-large;
     background-color: #3282c2;
 }
+#profileright img
+{
+    -webkit-border-radius: 1.6em;
+    -moz-border-radius: 1.6em;
+    border-radius: 1.6em;
+    -webkit-box-shadow: 7px 7px 7px #333;
+    -moz-box-shadow: 7px 7px 7px #333;
+    box-shadow: 7px 7px 7px #333;
+    float: right;
+}
 /*TABLE*/
 #profiletable
 {
@@ -426,13 +482,13 @@ header
 #profiletable td:nth-child(odd)
 {
     font-weight: bold;
-    font-family: "Cooper Std Black", Serif;
+    font-family: "Cooper Std Black" , Serif;
     text-align: right;
 }
 #profiletable td:nth-child(even)
 {
     font-style: normal;
-    font-family: "Franklin Gothic", Sans-Serif;
+    font-family: "Franklin Gothic" , Sans-Serif;
     text-align: left;
 }
 /*FOOTER*/
@@ -441,7 +497,7 @@ footer
     padding: 10px 10px 10px 10px;
     text-align: left;
     font-size: 100%;
-    font-family: "Franklin Gothic", Sans-Serif;
+    font-family: "Franklin Gothic" , Sans-Serif;
     clear: both;
     background-color: #3282c2;
     color: #FFFFFF;
