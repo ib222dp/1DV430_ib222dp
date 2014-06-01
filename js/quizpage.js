@@ -172,21 +172,29 @@ var Quiz = {
     //Funktion som anropas när sista frågan i XML-filen har besvarats
     endmenu: function (quiz, contentClass, quizNo) {
         var commentDiv = document.getElementById("commentdiv"), ratingDiv = document.getElementById("ratingdiv"), statDiv = document.getElementById("statdiv"),
-        commentButton = document.getElementById("commentbutton"), ratingButton = document.getElementById("ratingbutton"), statButton = document.getElementById("statbutton");
+        commentButton = document.getElementById("commentbutton"), ratingButton = document.getElementById("ratingbutton"), statButton = document.getElementById("statbutton"),
+        updateButton = document.getElementById("updatebutton");
 
         //Funktion som visar kommentarer och formulär för att skriva en ny kommentar
         var showComments = function (e) {
             e.preventDefault();
+            var comAcc = document.getElementById("comaccepted");
+            var comValP = document.getElementById("comvalp");
+
             if (ratingDiv.getAttribute("class") !== "hidden") {
                 ratingDiv.setAttribute("class", "hidden")
             } if (statDiv.getAttribute("class") !== "hidden") {
                 statDiv.setAttribute("class", "hidden");
+            } if (comAcc.getAttribute("class") !== "hidden") {
+                comAcc.setAttribute("class", "hidden")
+            } if (comValP.getAttribute("class") !== "hidden") {
+                comValP.setAttribute("class", "hidden")
             }
             commentDiv.removeAttribute("class", "hidden");
 
             var i, comments = quiz.getElementsByTagName("comments")[0], dl = document.getElementById("commentsdl"),
             noCommentsP = document.getElementById("nocommentsp"), commentForm = document.getElementById("commentform"),
-            commentSubmit = document.getElementById("commentsubmit"), commentClear = document.getElementById("commentclear");
+            commentSubmit = document.getElementById("commentsubmit");
 
             //Skriver ut "Inga kommentarer" om det inte finns några kommentarer i XML-filen
             if (comments.children.length === 0) {
@@ -194,7 +202,7 @@ var Quiz = {
                 var newNoCommentsP = document.createElement("p");
                 newNoCommentsP.setAttribute("id", "nocommentsp");
                 newNoCommentsP.innerHTML = "Inga kommentarer.";
-                commentDiv.insertBefore(newNoCommentsP, commentForm);
+                commentDiv.appendChild(newNoCommentsP);
                 //Läser in kommentarstext och namn på kommenterare från XML-filen och skriver ut i en lista i DOM:en
             } else {
                 commentDiv.removeChild(dl);
@@ -207,18 +215,12 @@ var Quiz = {
                     dtName.appendChild(ddText);
                     newDL.appendChild(dtName);
                 }
-                commentDiv.insertBefore(newDL, commentForm);
+                commentDiv.appendChild(newDL);
             }
 
             //Händelsehanterare kopplad till "click" för "Skicka"-knappen
             commentSubmit.onclick = function (e) {
-                Quiz.submitComment(contentClass, quizNo);
-                return false;
-            };
-
-            //Händelsehanterare kopplad till "click" för "Rensa"-knappen
-            commentClear.onclick = function (e) {
-                commentForm.reset();
+                Quiz.submitComment(contentClass, quizNo, commentDiv, commentSubmit, comValP);
                 return false;
             };
         };
@@ -313,19 +315,40 @@ var Quiz = {
         };
         //Händelsehanterare kopplad till "click" för "Statistik"-knappen
         statButton.addEventListener("click", showStats, false);
+
+        updateButton.onclick = function (e) {
+            Quiz.updateComments(contentClass, quizNo);
+            return false;
+        };
     },
 
     //Funktion som skickar kommentar och kommenterare till PHP-skript "savecomments" för att skriva dem till XML-filen
-    submitComment: function (contentClass, quizNo) {
+    submitComment: function (contentClass, quizNo, commentDiv, commentSubmit, comValP) {
 
-        var params = "contentClass=" + contentClass + "&quizNo=" + quizNo + "&comment=" + document.getElementById("comment").value
-                + "&userName=" + document.getElementById("username").value;
+        var comAccP = document.getElementById("comaccepted"), comment = document.getElementById("comment").value,
+        userName = document.getElementById("username").value;
+        var params = "contentClass=" + contentClass + "&quizNo=" + quizNo + "&comment=" + comment + "&userName=" + userName;
         var url = "../PHP/savecomments.php?" + params;
 
-        //Skapande av en ny AjaxCon-instans
-        new AjaxCon(url, function (data) {
+        if (comment.length === 0 || userName.length === 0) {
+            if (comValP.getAttribute("class") === "hidden") {
+                comValP.removeAttribute("class", "hidden");
+            }
+        } else {
+            commentSubmit.disabled = true;
+            commentSubmit.removeAttribute("class", "formbutton");
+            commentSubmit.setAttribute("class", "transparent");
 
-        });
+            new AjaxCon(url, function (data) {
+                if (comValP.getAttribute("class") !== "hidden") {
+                    comValP.setAttribute("class", "hidden");
+                }
+                comAccP.removeAttribute("class", "hidden");
+                commentSubmit.disabled = false;
+                commentSubmit.removeAttribute("class", "transparent");
+                commentSubmit.setAttribute("class", "formbutton");
+            });
+        }
     },
 
     //Funktion som skickar betyg till PHP-skript "saverating" för att skriva det till XML-filen
@@ -365,14 +388,22 @@ var Quiz = {
                 valP.removeAttribute("class", "hidden");
             }
         }
+    },
+
+    updateComments: function (contentClass, quizNo) {
+
+        var url = "../XML/" + contentClass + ".xml";
+
+        //Skapande av en ny AjaxCon-instans
+        new AjaxCon(url, function (data) {
+
+            var xmlDoc = data;
+
+            var quiz = xmlDoc.getElementsByTagName("quiz")[quizNo];
+
+            Quiz.endmenu(quiz, contentClass, quizNo);
+        });
     }
 };
 
 window.onload = Quiz.init;
-
-
-
-
-//http://stackoverflow.com/questions/2154801/childnodes-not-working-in-firefox-and-chrome-but-working-in-ie
-//quizNameH1.innerHTML = xmlDoc.getElementsByTagName("quizname")[0].textContent; (fungerar FF, Chrome)
-//quizNameH1.innerHTML = quiz.childNodes[0].text; (fungerar IE)
