@@ -22,7 +22,12 @@ function AjaxCon(url, callback) {
         }
     };
 
-    xhr.open("get", url, true);
+    //(http://www.newgrounds.com/bbs/topic/1095281)
+    if (url.slice(-4) === ".xml") {
+        xhr.open("get", url + "?nocache=" + new Date().getTime(), true);
+    } else {
+        xhr.open("get", url, true);
+    }
 
     xhr.send(null);
 };
