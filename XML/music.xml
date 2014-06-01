@@ -89,23 +89,24 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>20</timesplayed>
-    <times0correct>5</times0correct>
+    <timesplayed>4</timesplayed>
+    <times0correct>0</times0correct>
     <timesxcorrectcount>
-      <timesxcorrect>15</timesxcorrect>
+      <timesxcorrect>4</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
     </timesxcorrectcount>
     <ratings>
-      <rating>4</rating>
-      <rating>1</rating>
       <rating>0</rating>
-      <rating>1</rating>
+      <rating>0</rating>
+      <rating>0</rating>
+      <rating>0</rating>
       <rating>0</rating>
     </ratings>
-    <comments/>
+    <comments>
+    <comment><commenttext>Testkommentar 1</commenttext><commenter>Testare1</commenter></comment></comments>
   </quiz>
   <quiz name="Norska musiker" url="#" created="2013-03-04">
     <quiznumber>1</quiznumber>
