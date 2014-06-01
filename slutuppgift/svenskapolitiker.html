@@ -42,6 +42,7 @@
             <div id="quizmenu">
                 <div id="quizendmenu" class="hidden">
                     <ul>
+                        <li><a id="updatebutton" href="#">Uppdatera</a></li>
                         <li><a href="svenskapolitiker.html">Spela igen</a></li>
                         <li><a id="commentbutton" href="#">Kommentarer</a> </li>
                         <li><a id="ratingbutton" href="#">Betygsätt</a></li>
@@ -52,30 +53,31 @@
             <div id="commentdiv" class="hidden">
                 <h1>
                     KOMMENTARER</h1>
-                <p id="nocommentsp">
-                </p>
-                <dl id="commentsdl">
-                </dl>
                 <form action="#" method="post" id="commentform">
                 <div id="fieldsetcomments">
                     <fieldset>
                         <legend>Skriv kommentar</legend>
                         <label for="comment">
                             Skriv kommentar:</label>
-                        <textarea class="textarea" id="comment" name="comment" rows="5" cols="28"></textarea>
+                        <textarea class="textarea" id="comment" name="comment" rows="5" cols="28" maxlength="500"></textarea>
                         <br />
                         <label for="username">
                             Namn:</label>
-                        <input class="textbox" type="text" id="username" name="username" />
+                        <input class="textbox" type="text" id="username" name="username" maxlength="25" />
                     </fieldset>
                 </div>
-                <div id="buttons">
-                    <ul>
-                        <li><a id="commentclear" href="#">Rensa</a></li>
-                        <li><a id="commentsubmit" href="#">Skicka</a></li>
-                    </ul>
-                </div>
+                <button id="commentsubmit" class="formbutton" type="button">
+                    Skicka</button>
                 </form>
+                <p id="nocommentsp">
+                </p>
+                <dl id="commentsdl">
+                </dl>
+                <p id="comaccepted" class="hidden">
+                    Din kommentar har tagits emot. Klicka på Uppdatera och sedan på Kommentarer för
+                    att se din kommentar.</p>
+                <p id="comvalp" class="hidden">
+                    Du kan inte lämna något av fälten tomma.</p>
             </div>
             <div id="ratingdiv" class="hidden">
                 <h1>
