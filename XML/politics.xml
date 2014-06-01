@@ -55,19 +55,19 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>159</timesplayed>
-    <times0correct>1</times0correct>
+    <timesplayed>11</timesplayed>
+    <times0correct>0</times0correct>
     <timesxcorrectcount>
-      <timesxcorrect>3</timesxcorrect>
-      <timesxcorrect>144</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>11</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
     </timesxcorrectcount>
     <ratings>
-      <rating>11</rating>
-      <rating>12</rating>
-      <rating>10</rating>
-      <rating>23</rating>
-      <rating>34</rating>
+      <rating>0</rating>
+      <rating>2</rating>
+      <rating>0</rating>
+      <rating>0</rating>
+      <rating>0</rating>
     </ratings>
     <comments>
       <comment>
@@ -152,22 +152,23 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>23</timesplayed>
+    <timesplayed>0</timesplayed>
     <times0correct>0</times0correct>
     <timesxcorrectcount>
       <timesxcorrect>0</timesxcorrect>
-      <timesxcorrect>22</timesxcorrect>
-      <timesxcorrect>1</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
     </timesxcorrectcount>
     <ratings>
-      <rating>3</rating>
-      <rating>1</rating>
-      <rating>2</rating>
-      <rating>1</rating>
+      <rating>0</rating>
+      <rating>0</rating>
+      <rating>0</rating>
+      <rating>0</rating>
       <rating>0</rating>
     </ratings>
-    <comments/>
+    <comments>
+    </comments>
   </quiz>
   <quiz name="Svenska partier" url="#" created="2013-04-01">
     <quiznumber>2</quiznumber>
