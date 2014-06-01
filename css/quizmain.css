@@ -82,6 +82,10 @@ header
 {
     float: left;
 }
+#quizendmenu
+{
+    margin-top: 40px;
+}
 /*MENUBUTTONS (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
 #loginmenu a, #categories a, #logon a, #buttons a, #profilebuttons a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
 {
@@ -387,7 +391,7 @@ header
     -webkit-border-radius: 1.6em;
     border-radius: 1.6em;
 }
-#ratingform .formbutton
+#ratingform .formbutton, #commentform .formbutton
 {
     height: 40px;
     margin-left: 402px;
@@ -407,7 +411,7 @@ header
     font-weight: bold;
     line-height: 120%;
 }
-#ratingform .formbutton:hover
+#ratingform .formbutton:hover, #commentform .formbutton:hover
 {
      background-color: #6cd7af;
 }
