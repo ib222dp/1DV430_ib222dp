@@ -89,10 +89,10 @@
         </answer>
       </question>
     </questions>
-    <timesplayed>4</timesplayed>
+    <timesplayed>0</timesplayed>
     <times0correct>0</times0correct>
     <timesxcorrectcount>
-      <timesxcorrect>4</timesxcorrect>
+      <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
       <timesxcorrect>0</timesxcorrect>
@@ -106,7 +106,7 @@
       <rating>0</rating>
     </ratings>
     <comments>
-    <comment><commenttext>Testkommentar 1</commenttext><commenter>Testare1</commenter></comment></comments>
+    </comments>
   </quiz>
   <quiz name="Norska musiker" url="#" created="2013-03-04">
     <quiznumber>1</quiznumber>
