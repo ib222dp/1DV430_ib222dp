@@ -180,6 +180,7 @@ var Quiz = {
             e.preventDefault();
             var comAcc = document.getElementById("comaccepted");
             var comValP = document.getElementById("comvalp");
+            var noCommentsP = document.getElementById("nocommentsp");
 
             if (ratingDiv.getAttribute("class") !== "hidden") {
                 ratingDiv.setAttribute("class", "hidden")
@@ -189,20 +190,18 @@ var Quiz = {
                 comAcc.setAttribute("class", "hidden")
             } if (comValP.getAttribute("class") !== "hidden") {
                 comValP.setAttribute("class", "hidden")
+            } if (noCommentsP.getAttribute("class") !== "hidden") {
+                noCommentsP.setAttribute("class", "hidden");
             }
             commentDiv.removeAttribute("class", "hidden");
 
             var i, comments = quiz.getElementsByTagName("comments")[0], dl = document.getElementById("commentsdl"),
-            noCommentsP = document.getElementById("nocommentsp"), commentForm = document.getElementById("commentform"),
+            commentForm = document.getElementById("commentform"),
             commentSubmit = document.getElementById("commentsubmit");
 
-            //Skriver ut "Inga kommentarer" om det inte finns några kommentarer i XML-filen
+            //Visar "Inga kommentarer" om det inte finns några kommentarer i XML-filen
             if (comments.children.length === 0) {
-                commentDiv.removeChild(noCommentsP);
-                var newNoCommentsP = document.createElement("p");
-                newNoCommentsP.setAttribute("id", "nocommentsp");
-                newNoCommentsP.innerHTML = "Inga kommentarer.";
-                commentDiv.appendChild(newNoCommentsP);
+                noCommentsP.removeAttribute("class", "hidden");
                 //Läser in kommentarstext och namn på kommenterare från XML-filen och skriver ut i en lista i DOM:en
             } else {
                 commentDiv.removeChild(dl);
@@ -220,7 +219,7 @@ var Quiz = {
 
             //Händelsehanterare kopplad till "click" för "Skicka"-knappen
             commentSubmit.onclick = function (e) {
-                Quiz.submitComment(contentClass, quizNo, commentDiv, commentSubmit, comValP);
+                Quiz.submitComment(contentClass, quizNo, commentDiv, commentSubmit, comValP, noCommentsP);
                 return false;
             };
         };
@@ -231,12 +230,15 @@ var Quiz = {
         //Funktion som visar betyg samt formulär för att skicka in nytt betyg
         var showRating = function (e) {
             e.preventDefault();
+            var ratAcc = document.getElementById("rataccepted");
             var valP = document.getElementById("valp");
 
             if (commentDiv.getAttribute("class") !== "hidden") {
                 commentDiv.setAttribute("class", "hidden")
             } if (statDiv.getAttribute("class") !== "hidden") {
                 statDiv.setAttribute("class", "hidden");
+            } if (ratAcc.getAttribute("class") !== "hidden") {
+                ratAcc.setAttribute("class", "hidden")
             } if (valP.getAttribute("class") !== "hidden") {
                 valP.setAttribute("class", "hidden");
             }
@@ -259,12 +261,17 @@ var Quiz = {
                 totalAmountVotesArray.push(amountVotes);
                 totalAmountSum += totalAmountVotesArray[j];
             }
-            var totalRating = ratingAmountSum / totalAmountSum;
 
             ratingDiv.removeChild(ratingP);
             var newRatingP = document.createElement("p");
             newRatingP.setAttribute("id", "ratingp");
-            newRatingP.innerHTML = "Detta quiz har betyg: " + Math.round(totalRating);
+
+            if (totalAmountSum === 0) {
+                newRatingP.innerHTML = "Detta quiz har inte betygsatts ännu. "
+            } else {
+                var totalRating = ratingAmountSum / totalAmountSum;
+                newRatingP.innerHTML = "Detta quiz har betyg: " + Math.round(totalRating);
+            }
             ratingDiv.insertBefore(newRatingP, document.getElementById("ratingform"));
 
             //Händelsehanterare kopplad till "click" för "Skicka"-knappen
@@ -323,27 +330,34 @@ var Quiz = {
     },
 
     //Funktion som skickar kommentar och kommenterare till PHP-skript "savecomments" för att skriva dem till XML-filen
-    submitComment: function (contentClass, quizNo, commentDiv, commentSubmit, comValP) {
+    submitComment: function (contentClass, quizNo, commentDiv, commentSubmit, comValP, noCommentsP) {
 
         var comAccP = document.getElementById("comaccepted"), comment = document.getElementById("comment").value,
         userName = document.getElementById("username").value;
         var params = "contentClass=" + contentClass + "&quizNo=" + quizNo + "&comment=" + comment + "&userName=" + userName;
         var url = "../PHP/savecomments.php?" + params;
 
+        //Visar "Du kan inte lämna något av fälten tomma" om något av fälten är tomma
         if (comment.length === 0 || userName.length === 0) {
             if (comValP.getAttribute("class") === "hidden") {
                 comValP.removeAttribute("class", "hidden");
             }
         } else {
+            //Avaktiverar "Skicka"-knappen och gör den transparent
             commentSubmit.disabled = true;
             commentSubmit.removeAttribute("class", "formbutton");
             commentSubmit.setAttribute("class", "transparent");
 
+            //Skickar kommentar och kommenterare till PHP-skript och visar "Din kommentar har tagits emot"
             new AjaxCon(url, function (data) {
                 if (comValP.getAttribute("class") !== "hidden") {
                     comValP.setAttribute("class", "hidden");
                 }
+                if (noCommentsP.getAttribute("class") !== "hidden") {
+                    noCommentsP.setAttribute("class", "hidden")
+                }
                 comAccP.removeAttribute("class", "hidden");
+                //Återaktiverar "Skicka"-knappen
                 commentSubmit.disabled = false;
                 commentSubmit.removeAttribute("class", "transparent");
                 commentSubmit.setAttribute("class", "formbutton");
@@ -356,7 +370,7 @@ var Quiz = {
 
         var i, ratingValue, rating = document.getElementById("ratingform").elements["rating"], one = document.getElementById("one"),
         two = document.getElementById("two"), three = document.getElementById("three"), four = document.getElementById("four"),
-        five = document.getElementById("five");
+        five = document.getElementById("five"), ratAccP = document.getElementById("rataccepted");
 
         //Kontrollerar att ett alternativ har valts (http://stackoverflow.com/questions/1423777/javascript-how-can-i-check-whether-a-radio-button-is-selected)
         //samt hämtar värdet från den valda radioknappen (http://stackoverflow.com/questions/15839169/how-to-get-value-of-selected-radio-button)
@@ -370,17 +384,21 @@ var Quiz = {
             var params = "contentClass=" + contentClass + "&quizNo=" + quizNo + "&ratingValue=" + ratingValue;
             var url = "../PHP/saverating.php?" + params;
 
-            //Skickar betyget till PHP-skriptet, skriver ut att betyg har tagits emot, avaktiverar "Skicka"-knappen och gör den transparent
+            //Avaktiverar "Skicka"-knappen och gör den transparent
+            ratingSubmit.disabled = true;
+            ratingSubmit.removeAttribute("class", "formbutton");
+            ratingSubmit.setAttribute("class", "transparent");
+
+            //Skickar betyget till PHP-skriptet och visar "Ditt betyg har tagits emot"
             new AjaxCon(url, function (data) {
                 if (valP.getAttribute("class") !== "hidden") {
                     valP.setAttribute("class", "hidden");
                 }
-                var p = document.createElement("p");
-                p.innerHTML = "Ditt betyg har tagits emot.";
-                ratingDiv.appendChild(p);
-                ratingSubmit.disabled = true;
-                ratingSubmit.removeAttribute("class", "formbutton");
-                ratingSubmit.setAttribute("class", "transparent");
+                ratAccP.removeAttribute("class", "hidden");
+                //Återaktiverar "Skicka"-knappen
+                ratingSubmit.disabled = false;
+                ratingSubmit.removeAttribute("class", "transparent");
+                ratingSubmit.setAttribute("class", "formbutton");
             });
             //Visar "Du måste välja ett av betygsalternativen" om inget alternativ har valts
         } else {
@@ -390,17 +408,15 @@ var Quiz = {
         }
     },
 
+    //Läser in XML-filen på nytt när "Uppdatera"-knappen klickats på
     updateComments: function (contentClass, quizNo) {
 
         var url = "../XML/" + contentClass + ".xml";
 
         //Skapande av en ny AjaxCon-instans
         new AjaxCon(url, function (data) {
-
             var xmlDoc = data;
-
             var quiz = xmlDoc.getElementsByTagName("quiz")[quizNo];
-
             Quiz.endmenu(quiz, contentClass, quizNo);
         });
     }
