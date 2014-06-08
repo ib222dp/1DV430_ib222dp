@@ -22,8 +22,9 @@ function AjaxCon(url, callback) {
         }
     };
 
-    //(http://www.newgrounds.com/bbs/topic/1095281)
     if (url.slice(-4) === ".xml") {
+        //Lägger till datum och tid till query-string för att se till att XML-filen verkligen läses in på nytt 
+        //(http://www.newgrounds.com/bbs/topic/1095281)
         xhr.open("get", url + "?nocache=" + new Date().getTime(), true);
     } else {
         xhr.open("get", url, true);
