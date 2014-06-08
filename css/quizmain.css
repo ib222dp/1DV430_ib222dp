@@ -74,20 +74,17 @@ header
 {
     float: right;
 }
-#loginmenu, #quizendmenu
+#quizendmenu
 {
     width: 775px;
+    margin-top: 40px;
 }
 #categories
 {
     float: left;
 }
-#quizendmenu
-{
-    margin-top: 40px;
-}
 /*MENUBUTTONS (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
-#loginmenu a, #categories a, #logon a, #buttons a, #profilebuttons a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
+#categories a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
 {
     height: 20px;
     display: block;
@@ -98,19 +95,19 @@ header
     text-align: center;
     text-decoration: none;
 }
-#loginmenu a:hover, #categories a:hover, #logon a:hover
+#categories a:hover
 {
     background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
     background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690));
     background-color: #298a40;
 }
-#loginmenu .active a, #categories .active a, #logon .active a
+#categories .active a
 {
     background: -moz-linear-gradient(center top, #7ad690, #3ec05c 25%, #298a40 45%, #3ec05c 85%, #7ad690);
     background: -webkit-gradient(linear, center top, center bottom, from(#7ad690), color-stop(25%, #3ec05c), color-stop(45%, #298a40), color-stop(85%, #3ec05c), to(#7ad690));
     background-color: #298a40;
 }
-#buttons a, #profilebuttons a, #sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
+#sortbuttons a, #questiontext a, #nextbutton a, #quizendmenu a
 {
     padding: 10px 0px 10px 0px;
     background-color: #817dda;
@@ -119,25 +116,25 @@ header
     -moz-box-shadow: 3px 3px 3px #333;
     box-shadow: 3px 3px 3px #333;
 }
-#buttons a:hover, #profilebuttons a:hover, #sortbuttons a:hover, #questiontext a:hover, #nextbutton a:hover, #formsearch a:hover, #quizendmenu a:hover
+#sortbuttons a:hover, #questiontext a:hover, #nextbutton a:hover, #quizendmenu a:hover
 {
     background-color: #6cd7af;
 }
-/*Loginmenu, categories, logon (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
-#loginmenu li, #categories, #categories li, #logon li, #quizendmenu li
+/*Categories, Quizendmenu (http://www.dynamicdrive.com/style/csslibrary/item/css3_gradient_menu_buttons/)*/
+#categories, #categories li, #quizendmenu li
 {
     width: 150px;
 }
-#loginmenu li, #categories li, #quizendmenu li
+#categories li, #quizendmenu li
 {
     margin-top: 5px;
 }
-#loginmenu li, #logon li, #quizendmenu li
+#quizendmenu li
 {
     margin-left: 5px;
     float: right;
 }
-#loginmenu a, #categories a, #logon a
+#categories a
 {
     padding: 5px 7px 5px 7px;
     border: 2px solid gray;
@@ -147,46 +144,17 @@ header
     color: #FFFFFF;
     font-family: "Cooper Std Black" , Serif;
 }
-#logon a
-{
-    margin-top: 65px;
-}
-/*Buttons, Sortbuttons, Profilebuttons, Questiontext, Nextbutton*/
-#buttons
-{
-    width: 500px;
-}
+/*Sortbuttons, Questiontext, Nextbutton*/
 #sortbuttons
 {
     width: 320px;
     height: 60px;
-}
-#profilebuttons
-{
-    width: 600px;
-    height: 65px;
-    margin: 0px 5px 0px 5px;
-}
-#buttons a, #profilebuttons a
-{
-    margin-left: 10px;
-    float: right;
-}
-#buttons a
-{
-    width: 150px;
-    margin-top: 10px;
 }
 #sortbuttons a
 {
     float: right;
     width: 150px;
     margin: 0px 10px 0px 0px;
-}
-#profilebuttons a
-{
-    width: 280px;
-    margin-right: 10px;
 }
 #questiontext a, #nextbutton a
 {
@@ -195,20 +163,24 @@ header
     margin-left: 20px;
 }
 /*LINKS*/
-/*Starttext, Quizzes, Answertext*/
-#starttext a, #quizzes a, #answertext a
+/*Quizzes, Answertext*/
+#quizzes a, #answertext a
 {
     color: Blue;
 }
-#starttext a:hover, #quizzes a:hover, #answertext a:hover
+#answertext
+{
+    padding-bottom: 30px;
+}
+#quizzes a:hover, #answertext a:hover
 {
     color: Purple;
 }
-#starttext a:visited, #quizzes a:visited, #answertext a:visited
+#quizzes a:visited, #answertext a:visited
 {
     color: Purple;
 }
-#starttext a:focus, #quizzes a:focus, #answertext a:focus
+#quizzes a:focus, #answertext a:focus
 {
     color: Red;
 }
@@ -237,7 +209,7 @@ header
     font-family: "Cooper Std Black" , Serif;
     font-weight: bold;
 }
-#content a, #contentheight a, p, #question p, #quiz p, #answertext a, p, #starttext p, #created p, #quizzes p, #commentdiv p, dt, #ratingdiv p, #statdiv p, #statsul
+#content a, #contentheight a, p, #quizzes p, #quiz p, #answertext a, p, #commentdiv p, dt, #ratingdiv p, #statdiv p, #statsul, #starttext p
 {
     font-family: "Franklin Gothic" , Sans-Serif;
     font-weight: bold;
@@ -263,7 +235,7 @@ header
     font-style: normal;
     margin-left: 20px;
 }
-#question h1, h2, p, #quiz h1, p, #answertext a, p, #starttext h1, p, #commentdiv h1, p, #ratingdiv h1, p, #statdiv h1, p, #statsul
+#quiz h1, p, #question h1, h2, p, #answertext a, p, #commentdiv h1, p, #ratingdiv h1, p, #statdiv h1, p, #statsul, #starttext h1, p
 {
     padding: 20px;
 }
@@ -271,21 +243,17 @@ header
 {
     padding-top: 10px;
 }
-/*Quizzes*/
 #quizzes
 {
     margin-top: 15px;
 }
 /*FORMS*/
-#form, #commentform, #ratingform
-{
-    width: 500px;
-}
 #commentform, #ratingform
 {
+    width: 500px;
     padding: 20px;
 }
-#fieldsetedit, #fieldsetcreate, #fieldsetquiz, #fieldsetcomments, #fieldsetrating
+#fieldsetcomments, #fieldsetrating
 {
     width: 500px;
     -moz-border-radius: 8px;
@@ -297,12 +265,19 @@ header
     margin: 10px 0px 10px 0px;
     background-color: #817dda;
 }
-#fieldsetlogon
+#commentform legend
 {
-    width: 600px;
-    height: 50px;
+    visibility: hidden;
 }
-#form label, #formlogon label, #formsearch label, #formquiz label, #commentform label
+#ratingform legend
+{
+    padding: 15px;
+    padding-bottom: 25px;
+    font-family: "Cooper Std Black" , Serif;
+    font-weight: bolder;
+    font-size: 150%;
+}
+#commentform label
 {
     width: 170px;
     display: block;
@@ -311,6 +286,20 @@ header
     clear: left;
     font-family: "Franklin Gothic" , Sans-Serif;
     font-weight: bold;
+    float: left;
+}
+#commentform .textarea, #commentform .textbox
+{
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid;
+}
+#commentform .textarea
+{
+    height: 100px;
 }
 #radiobuttons
 {
@@ -319,79 +308,7 @@ header
     font-family: "Franklin Gothic" , Sans-Serif;
     font-weight: bold;
 }
-#form label, #formlogon label, #formquiz label, #commentform label
-{
-    float: left;
-}
-#formsearch label
-{
-    float: right;
-}
-#formlogon label
-{
-    color: #FFFFFF;
-}
-#form .textbox, #form .textarea, #formlogon .textbox, #formsearch .textbox, #formquiz .textbox, #formquiz .textarea, #formquiz .select, #commentform .textarea, #commentform .textbox
-{
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-}
-#form .textbox, #form .textarea, #formquiz .textbox, #formquiz .textarea, #formquiz .select, #commentform .textbox, #commentform .textarea
-{
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid;
-}
-#form .textarea, #formquiz .textarea, #commentform .textarea
-{
-    height: 100px;
-}
-#formlogon .textbox
-{
-    width: 100px;
-    margin-bottom: 5px;
-}
-#form legend, #formquiz legend, #ratingform legend
-{
-    padding: 15px;
-    padding-bottom: 25px;
-    font-family: "Cooper Std Black" , Serif;
-    font-weight: bolder;
-    font-size: 150%;
-}
-#formlogon legend, #formsearch legend, #commentform legend
-{
-    visibility: hidden;
-}
-#formsearch
-{
-    width: 235px;
-    height: 45px;
-    float: right;
-}
-#formsearch .textbox
-{
-    height: 20px;
-}
-#formsearch label
-{
-    width: 65px;
-    height: 20px;
-}
-#formsearch a
-{
-    width: 50px;
-    padding: 3px 0px 3px 17px;
-    display: block;
-    background-color: #817dda;
-    color: #000000;
-    text-decoration: none;
-    -moz-border-radius: 1.6em;
-    -webkit-border-radius: 1.6em;
-    border-radius: 1.6em;
-}
-#ratingform .formbutton, #commentform .formbutton
+#commentform .formbutton, #ratingform .formbutton
 {
     height: 40px;
     margin-left: 402px;
@@ -411,7 +328,7 @@ header
     font-weight: bold;
     line-height: 120%;
 }
-#ratingform .formbutton:hover, #commentform .formbutton:hover
+#commentform .formbutton:hover, #ratingform .formbutton:hover
 {
      background-color: #6cd7af;
 }
@@ -439,61 +356,6 @@ header
 .transparent:hover
 {
     background-color: #817dda;
-}
-/*Profile*/
-#profileleft
-{
-    height: 449px;
-    float: left;
-}
-#profileleft h1
-{
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    width: 600px;
-    -webkit-box-shadow: 7px 7px 7px #333;
-    -moz-box-shadow: 7px 7px 7px #333;
-    box-shadow: 7px 7px 7px #333;
-    margin: 0px 5px 0px 5px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    text-align: center;
-    font-size: xx-large;
-    background-color: #3282c2;
-}
-#profileright img
-{
-    -webkit-border-radius: 1.6em;
-    -moz-border-radius: 1.6em;
-    border-radius: 1.6em;
-    -webkit-box-shadow: 7px 7px 7px #333;
-    -moz-box-shadow: 7px 7px 7px #333;
-    box-shadow: 7px 7px 7px #333;
-    float: right;
-}
-/*TABLE*/
-#profiletable
-{
-    width: 600px;
-    margin-top: 70px;
-    margin-bottom: 70px;
-}
-#profiletable td
-{
-    padding: 10px;
-}
-#profiletable td:nth-child(odd)
-{
-    font-weight: bold;
-    font-family: "Cooper Std Black" , Serif;
-    text-align: right;
-}
-#profiletable td:nth-child(even)
-{
-    font-style: normal;
-    font-family: "Franklin Gothic" , Sans-Serif;
-    text-align: left;
 }
 /*FOOTER*/
 footer
